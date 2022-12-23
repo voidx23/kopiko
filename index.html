@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./kopiko.css" />
+    <title>Kopiko</title>
+    <link
+      rel="icon"
+      href="data:image/png;base64,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"
+      type="image/gif"
+      sizes="16x16"
+    />
+  </head>
+  <body>
+    <header class="site-header col-lg-12 text-light">
+      <div class="site-identity">
+        <div class="p-4">
+          <p class="col-lg-12 col-xl-12 col-md-12 col-12" id="logo">
+            <a href="#" id="main-text" style="font-size: 4vw">KOPIKO USA</a>
+          </p>
+          <p class="site-description" style="font-size: 2vw; color: #b7b7b7">
+            World’s #1 Coffee Candy & Coffee Mix
+          </p>
+        </div>
+        <div class="col-lg-12 col-12 justify-content-center p-2" id="nav">
+          <nav id="nav-main" class="navbar navbar-expand-lg navbar-light">
+            <button
+              class="navbar-toggler mx-auto my-auto"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse justify-content-center"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav mx-auto" id="list-main">
+                <li class="nav-item margin">
+                  <a id="list-home" class="nav-link" href="#"
+                    >HOME<span class="sr-only"></span
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a id="list-collections" class="nav-link" href="#"
+                    >COLLECTIONS<span class="sr-only"></span
+                  ></a>
+                </li>
+
+                <li class="nav-item">
+                  <a id="list-shop" class="nav-link" href="#">SHOP</a>
+                </li>
+                <li class="nav-item">
+                  <a id="list-news" class="nav-link" href="#">NEWS & UPDATES</a>
+                </li>
+                <li class="nav-item">
+                  <a id="list-about" class="nav-link" href="#">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                  <a id="list-contact" class="nav-link" href="#">CONTACT US</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div>
+      <div class="col-lg-12 col-xl-12 col-md-12 col-12" id="img">
+        <img id="img-main" src="./cropped-bigstock-157064345.png" alt="" />
+      </div>
+    </div>
+    <div class="col-lg-12 col-xl-12 col-md-12 col-12 mt-4" id="main-2">
+      <div class="col-lg-12 col-xl-12 col-md-12 col-12 container-fluid">
+        <div
+          class="pt-4 mt-4 mx-auto col-lg-12 col-xl-12 col-md-12 col-12 mt-4"
+          id="para-div"
+        >
+          <p>
+            <strong class="para-kopiko"
+              >Kopiko, is the pioneer of coffee products like coffee candy and
+              coffee mix, which has been the nation’s favorite for <br />
+              over 35 years and currently being exported to more than 80
+              countries all over the world.</strong
+            >
+          </p>
+          <p>
+            <strong class="para-kopiko"
+              >Our products contain extract from real coffee beans from Java
+              Island.
+            </strong>
+          </p>
+        </div>
+        <div class="col-lg-12 col-xs-12 mx-auto" id="img1-main">
+          <img id="img1" src="./Screenshot_20221222_011411.png" alt="" />
+        </div>
+      </div>
+      <div class="container-fluid">
+        <footer>
+          <div class="social-1 col-xs-6 col-lg-12" id="footer-main">
+            <span class="span">
+              <a class="a-icon" href="#"
+                ><img src="./facebook.png" alt="fb icon" id="fbicon"
+              /></a>
+            </span>
+            <span class="span">
+              <a class="a-icon" href="#">
+                <img src="./instagram.png" alt="igicon" id="igicon" />
+              </a>
+            </span>
+
+            <span class="span">
+              <a class="a-icon" href="#"
+                ><img src="./linkedin.png" alt="liicon" id="liicon"
+              /></a>
+            </span>
+            <span class="span"
+              ><a class="a-icon" href="#"
+                ><img src="./youtube.png" alt="yticon" id="yticon" /></a
+            ></span>
+          </div>
+          <div class="container">
+            <p
+              style="
+                justify-content: center;
+                display: flex;
+                font-size: 1.2vw;
+                color: white;
+              "
+            >
+              Copyright © 2022 KOPIKO USA | Signify Dark By WEN Themes
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
